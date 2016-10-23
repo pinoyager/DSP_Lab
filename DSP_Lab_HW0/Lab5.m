@@ -3,7 +3,7 @@ clear;
 clc;
 
 %% read image
-filename = 'image.jpg';
+filename = 't_mac_dunk.jpg';
 I = imread(filename);
 figure('name', 'source image');
 imshow(I);
@@ -20,31 +20,31 @@ I4 = flip(I,1);
 I5 = flip(I,2);
 
 % rotation function
-I6 = rotation(I, pi);
+I6 = rotation(I, pi/3);
 
 %% show image
-figure('name', 'grey scale image'),
+figure('name', 't_mac grey scale image'),
 imshow(I2);
 
-figure('name', 'flip horizontal'),
+figure('name', 't_mac flip horizontal'),
 imshow(I3);
 
-figure('name', 'flip vertical'),
+figure('name', 't_mac flip vertical'),
 imshow(I4);
 
-figure('name', 'flip vertical and horizontal'),
+figure('name', 't_mac flip vertical and horizontal'),
 imshow(I5);
 %}
-figure('name', 'rotation 180 degree'),
+figure('name', 't_mac rotation 60 degree'),
 imshow(I6);
 %% write image
 % save image for your report
 
-filename2 = 'gray_image.jpg';
+filename2 = 'tmac_gray_image.jpg';
 imwrite(I2, filename2);
-imwrite(I3, 'fliplr.jpg');
-imwrite(I4, 'flipud.jpg');
-imwrite(I5, 'fliplr_and_flipud.jpg');
-imwrite(I6, 'rotate_180degree.jpg');
+imwrite(I3, 'tmac_fliplr.jpg');
+imwrite(I4, 'tmac_flipud.jpg');
+imwrite(I5, 'tmac_fliplr_and_flipud.jpg');
+imwrite(I6, 'tmac_rotate_60degree.jpg');
 
 
